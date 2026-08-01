@@ -1,6 +1,6 @@
-import { Component, signal } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { Component, inject, signal } from '@angular/core';
 import { ButtonComponent } from "./components/button-component/button-component";
+import { SumService } from './services/sum';
 
 @Component({
   selector: 'app-root',
@@ -9,5 +9,5 @@ import { ButtonComponent } from "./components/button-component/button-component"
   styleUrl: './app.css'
 })
 export class App {
-  protected readonly title = signal('gh-actions');
+  sumService = inject(SumService);
 }
