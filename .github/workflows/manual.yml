@@ -34,7 +34,7 @@ jobs:
 
     # 4. Run tests
     - name: Run Tests
-      run: npm run test -- --run
+      run: ng test -- --run
 
     # 5. Build the application for production
     - name: Build Angular App
