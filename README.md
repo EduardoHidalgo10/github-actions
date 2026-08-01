@@ -2,7 +2,7 @@
 
 This repository is a hands-on practice project for learning **GitHub Actions**.
 
-The goal is to explore CI/CD workflows in a real codebase: how to trigger jobs on push and pull requests, install dependencies, run tests, and build an application automatically.
+The goal is to explore CI/CD workflows in a real codebase: how to trigger jobs on push and pull requests, install dependencies, run the linter, run tests, and build an application automatically.
 
 ## What this project includes
 
@@ -11,6 +11,7 @@ The goal is to explore CI/CD workflows in a real codebase: how to trigger jobs o
   - Checkout the repository
   - Set up Node.js
   - Install dependencies with `npm ci`
+  - Run the linter with `npm run lint`
   - Run tests
   - Build the Angular app
 
@@ -21,13 +22,19 @@ This is not a production-ready product. It exists to practice and understand:
 - Workflow triggers (`push`, `pull_request`)
 - Jobs and steps in GitHub Actions
 - Running Node.js-based CI tasks on GitHub-hosted runners
-- Automating test and build steps for an Angular project
+- Automating lint, test, and build steps for an Angular project
 
 ## Getting started locally
 
 ```bash
 npm install
 npm start
+```
+
+Run the linter:
+
+```bash
+npm run lint
 ```
 
 Run tests:

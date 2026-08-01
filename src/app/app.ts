@@ -1,4 +1,4 @@
-import { Component, inject, signal } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { ButtonComponent } from "./components/button-component/button-component";
 import { SumService } from './services/sum';
 
