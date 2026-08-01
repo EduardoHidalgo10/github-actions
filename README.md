@@ -1,59 +1,43 @@
-# GhActions
+# GitHub Actions Practice
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 21.2.11.
+This repository is a hands-on practice project for learning **GitHub Actions**.
 
-## Development server
+The goal is to explore CI/CD workflows in a real codebase: how to trigger jobs on push and pull requests, install dependencies, run tests, and build an application automatically.
 
-To start a local development server, run:
+## What this project includes
 
-```bash
-ng serve
-```
+- A small **Angular** application used as the sample app for the pipelines
+- A workflow under `.github/workflows/` that demonstrates a basic CI pipeline:
+  - Checkout the repository
+  - Set up Node.js
+  - Install dependencies with `npm ci`
+  - Run tests
+  - Build the Angular app
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+## Why this project exists
 
-## Code scaffolding
+This is not a production-ready product. It exists to practice and understand:
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+- Workflow triggers (`push`, `pull_request`)
+- Jobs and steps in GitHub Actions
+- Running Node.js-based CI tasks on GitHub-hosted runners
+- Automating test and build steps for an Angular project
 
-```bash
-ng generate component component-name
-```
-
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
-
-```bash
-ng generate --help
-```
-
-## Building
-
-To build the project run:
+## Getting started locally
 
 ```bash
-ng build
+npm install
+npm start
 ```
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-## Running unit tests
-
-To execute unit tests with the [Vitest](https://vitest.dev/) test runner, use the following command:
+Run tests:
 
 ```bash
-ng test
+npm test
 ```
 
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
+Build the app:
 
 ```bash
-ng e2e
+npm run build
 ```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
