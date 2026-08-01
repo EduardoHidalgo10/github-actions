@@ -8,18 +8,18 @@ describe('ButtonComponent', () => {
     }).compileComponents();
   });
 
-  it('should create the component', () => {
+  it('should increment the sum', () => {
     const fixture = TestBed.createComponent(ButtonComponent);
     const component = fixture.componentInstance;
-    expect(component).toBeTruthy();
+    component.sum();
+    expect(component.sumService.sum()).toBe(1);
   });
 
-  it('should render the default text', async () => {
+
+  it('should reset the sum', () => {
     const fixture = TestBed.createComponent(ButtonComponent);
-    await fixture.whenStable();
-    const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelector('p')?.textContent).toContain(
-      'button-component works!',
-    );
+    const component = fixture.componentInstance;
+    component.reset();
+    expect(component.sumService.sum()).toBe(0);
   });
 });
